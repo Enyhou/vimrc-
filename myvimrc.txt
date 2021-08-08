@@ -1,0 +1,27 @@
+:set number
+:let $LANG = 'en_US'
+:set visualbell
+:set t_vb=
+:set backspace=indent,eol,start
+:imap <C-BS> <C-W>
+:syntax on
+:set autoindent
+:vnoremap <silent><c-s> <c-c>:update<cr>gv
+:inoremap <silent><c-s> <c-o>:update<cr>
+:vmap <C-c> "+yi
+:vmap <C-x> "+c
+:vmap <C-v> c<ESC>"+p
+:imap <C-v> <C-r><C-o>+
+:colorscheme transparent
+
+:filetype plugin indent on
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+:set whichwrap+=<,>,[,]
+
+:inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+
+
+
+
